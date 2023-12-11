@@ -657,7 +657,7 @@ section {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5%;
+  gap: 50px 100px;
 }
 
 .image-grid img {
