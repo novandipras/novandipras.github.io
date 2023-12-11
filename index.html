@@ -406,6 +406,7 @@
                 /></a>
               </div>
               <div class="image-grid" id="dynamic-grid-1"></div>
+
               <script>
                 var imageArray = [
                   "assets/img/portfolio/ukur_customer/Screenshot_2023-12-10-05-25-49-859_com.ukur.jpg",
@@ -421,7 +422,39 @@
                   var imgElement = document.createElement("img");
                   imgElement.src = src;
                   imgElement.alt = alt;
+
+                  // Add click event listener to each image
+                  imgElement.addEventListener("click", function () {
+                    showLargeImage(src, alt);
+                  });
+
                   return imgElement;
+                }
+
+                function showLargeImage(src, alt) {
+                  // Create modal container
+                  var modal = document.createElement("div");
+                  modal.className = "modal";
+
+                  // Create image element for the modal
+                  var modalImage = document.createElement("img");
+                  modalImage.src = src;
+                  modalImage.alt = alt;
+
+                  // Append image to the modal
+                  modal.appendChild(modalImage);
+
+                  // Append the modal to the body
+                  document.body.appendChild(modal);
+
+                  // Display the modal
+                  modal.style.display = "flex";
+
+                  // Add click event listener to close the modal
+                  modal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    modal.remove(); // Remove the modal from the DOM after closing
+                  });
                 }
 
                 var gridContainer = document.getElementById("dynamic-grid-1");
@@ -467,10 +500,42 @@
                   var imgElement = document.createElement("img");
                   imgElement.src = src;
                   imgElement.alt = alt;
+
+                  // Add click event listener to each image
+                  imgElement.addEventListener("click", function () {
+                    showLargeImage(src, alt);
+                  });
+
                   return imgElement;
                 }
 
-                var gridContainer = document.getElementById("dynamic-grid-2");
+                function showLargeImage(src, alt) {
+                  // Create modal container
+                  var modal = document.createElement("div");
+                  modal.className = "modal";
+
+                  // Create image element for the modal
+                  var modalImage = document.createElement("img");
+                  modalImage.src = src;
+                  modalImage.alt = alt;
+
+                  // Append image to the modal
+                  modal.appendChild(modalImage);
+
+                  // Append the modal to the body
+                  document.body.appendChild(modal);
+
+                  // Display the modal
+                  modal.style.display = "flex";
+
+                  // Add click event listener to close the modal
+                  modal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    modal.remove(); // Remove the modal from the DOM after closing
+                  });
+                }
+
+                var gridContainer = document.getElementById("dynamic-grid-1");
 
                 for (var i = 0; i < imageArray.length; i++) {
                   var imageUrl = imageArray[i];
@@ -516,10 +581,42 @@
                   var imgElement = document.createElement("img");
                   imgElement.src = src;
                   imgElement.alt = alt;
+
+                  // Add click event listener to each image
+                  imgElement.addEventListener("click", function () {
+                    showLargeImage(src, alt);
+                  });
+
                   return imgElement;
                 }
 
-                var gridContainer = document.getElementById("dynamic-grid-3");
+                function showLargeImage(src, alt) {
+                  // Create modal container
+                  var modal = document.createElement("div");
+                  modal.className = "modal";
+
+                  // Create image element for the modal
+                  var modalImage = document.createElement("img");
+                  modalImage.src = src;
+                  modalImage.alt = alt;
+
+                  // Append image to the modal
+                  modal.appendChild(modalImage);
+
+                  // Append the modal to the body
+                  document.body.appendChild(modal);
+
+                  // Display the modal
+                  modal.style.display = "flex";
+
+                  // Add click event listener to close the modal
+                  modal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    modal.remove(); // Remove the modal from the DOM after closing
+                  });
+                }
+
+                var gridContainer = document.getElementById("dynamic-grid-1");
 
                 for (var i = 0; i < imageArray.length; i++) {
                   var imageUrl = imageArray[i];
@@ -548,10 +645,42 @@
                   var imgElement = document.createElement("img");
                   imgElement.src = src;
                   imgElement.alt = alt;
+
+                  // Add click event listener to each image
+                  imgElement.addEventListener("click", function () {
+                    showLargeImage(src, alt);
+                  });
+
                   return imgElement;
                 }
 
-                var gridContainer = document.getElementById("dynamic-grid-4");
+                function showLargeImage(src, alt) {
+                  // Create modal container
+                  var modal = document.createElement("div");
+                  modal.className = "modal";
+
+                  // Create image element for the modal
+                  var modalImage = document.createElement("img");
+                  modalImage.src = src;
+                  modalImage.alt = alt;
+
+                  // Append image to the modal
+                  modal.appendChild(modalImage);
+
+                  // Append the modal to the body
+                  document.body.appendChild(modal);
+
+                  // Display the modal
+                  modal.style.display = "flex";
+
+                  // Add click event listener to close the modal
+                  modal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    modal.remove(); // Remove the modal from the DOM after closing
+                  });
+                }
+
+                var gridContainer = document.getElementById("dynamic-grid-1");
 
                 for (var i = 0; i < imageArray.length; i++) {
                   var imageUrl = imageArray[i];
