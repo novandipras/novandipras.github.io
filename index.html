@@ -694,6 +694,76 @@
                 }
               </script>
             </div>
+            <div class="resume-item" style="margin-bottom: 80px">
+              <h4>Vacation App</h4>
+              <div style="margin-bottom: 40px">
+                <em>Implement Airbnb design use flutter for training</em>
+              </div>
+              <div class="image-grid" id="dynamic-grid-5"></div>
+              <script>
+                var imageArray = [
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103600.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103656.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103713.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103752.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103809.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103828.png",
+                  "assets/img/portfolio/airbnbcopy/Screenshot_20231213_103851.png",
+                ];
+
+                function createImageElement(src, alt) {
+                  var imgElement = document.createElement("img");
+                  imgElement.src = src;
+                  imgElement.alt = alt;
+
+                  // Add click event listener to each image
+                  imgElement.addEventListener("click", function () {
+                    showLargeImage(src, alt);
+                  });
+
+                  return imgElement;
+                }
+
+                function showLargeImage(src, alt) {
+                  // Create modal container
+                  var modal = document.createElement("div");
+                  modal.className = "modal";
+
+                  // Create image element for the modal
+                  var modalImage = document.createElement("img");
+                  modalImage.src = src;
+                  modalImage.alt = alt;
+
+                  // Append image to the modal
+                  modal.appendChild(modalImage);
+
+                  // Append the modal to the body
+                  document.body.appendChild(modal);
+
+                  // Display the modal
+                  modal.style.display = "flex";
+
+                  // Add click event listener to close the modal
+                  modal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                    modal.remove(); // Remove the modal from the DOM after closing
+                  });
+                }
+
+                var gridContainer = document.getElementById("dynamic-grid-5");
+
+                for (var i = 0; i < imageArray.length; i++) {
+                  var imageUrl = imageArray[i];
+                  var imageElement = createImageElement(
+                    imageUrl,
+                    `Image ${i + 1}`
+                  );
+                  var divElement = document.createElement("div");
+                  divElement.appendChild(imageElement);
+                  gridContainer.appendChild(divElement);
+                }
+              </script>
+            </div>
           </div>
         </div>
       </section>
