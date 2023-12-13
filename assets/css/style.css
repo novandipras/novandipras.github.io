@@ -33,6 +33,20 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+#downloadButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#downloadButton:hover {
+  background-color: #45a049;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
