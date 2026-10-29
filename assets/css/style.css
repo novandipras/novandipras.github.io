@@ -40,7 +40,7 @@ body {
   background:
     radial-gradient(circle at top left, rgba(209, 213, 219, 0.28), transparent 32%),
     radial-gradient(circle at bottom right, rgba(107, 114, 128, 0.12), transparent 28%),
-    linear-gradient(180deg, #f7f7f7 0%, #fbf8ee 48%, #f7f7f7 100%);
+    linear-gradient(180deg, #f7f7f7 0%, #eeeeee 48%, #f7f7f7 100%);
   line-height: 1.7;
   position: relative;
 }
@@ -622,7 +622,7 @@ section {
 
 .image-grid > div:hover img {
   transform: scale(1.03);
-  filter: saturate(1.02);
+  filter: none;
 }
 
 #dynamic-grid-doc {
@@ -641,7 +641,7 @@ section {
   inset: 0;
   z-index: 99999;
   padding: 24px;
-  background: rgba(47, 63, 36, 0.72);
+  background: rgba(31, 41, 55, 0.78);
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(8px);
@@ -856,10 +856,10 @@ section {
   --muted: #64748b;
   --heading: #1e293b;
   --line: #e2e8f0;
-  --primary: #718355;
-  --primary-deep: #52623d;
-  --secondary: #52623d;
-  --accent: #e8eee0;
+  --primary: #9ca3af;
+  --primary-deep: #6b7280;
+  --secondary: #4b5563;
+  --accent: #e5e7eb;
   --shadow-lg: 0 12px 30px rgba(30, 41, 59, 0.06);
   --shadow-md: 0 8px 20px rgba(30, 41, 59, 0.05);
   --shadow-sm: 0 4px 12px rgba(30, 41, 59, 0.04);
