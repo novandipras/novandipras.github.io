@@ -221,13 +221,10 @@
     modal.className = 'modal'; modal.setAttribute('aria-label', target.alt);
     modal.style.cssText = 'display:flex;width:100vw;height:100vh;max-width:none;max-height:none;border:0;margin:0';
     const photo = document.createElement('img'); photo.src = target.src; photo.alt = target.alt;
-    const close = document.createElement('button'); close.textContent = 'Close ×';
-    close.style.cssText = 'position:absolute;top:20px;right:24px;padding:10px 18px;border:0;border-radius:8px;background:#fff;color:#27272a';
-    close.type = 'button'; close.addEventListener('click', () => modal.close());
-    modal.append(photo, close); document.body.append(modal);
+    modal.append(photo); document.body.append(modal);
     modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
     modal.addEventListener('close', () => { modal.remove(); target.focus(); }, { once:true });
-    modal.showModal(); close.focus();
+    modal.showModal();
   };
   document.querySelectorAll('[data-cv-image]').forEach(img => {
     img.addEventListener('click', () => open(img));
