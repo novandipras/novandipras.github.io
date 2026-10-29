@@ -844,3 +844,129 @@ section {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Simple CV layout: keep the content readable and the visual tone restrained. */
+:root {
+  --bg: #f7f7f3;
+  --bg-soft: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --text: #334155;
+  --muted: #64748b;
+  --heading: #1e293b;
+  --line: #e2e8f0;
+  --primary: #718355;
+  --primary-deep: #52623d;
+  --secondary: #52623d;
+  --accent: #e8eee0;
+  --shadow-lg: 0 12px 30px rgba(30, 41, 59, 0.06);
+  --shadow-md: 0 8px 20px rgba(30, 41, 59, 0.05);
+  --shadow-sm: 0 4px 12px rgba(30, 41, 59, 0.04);
+}
+
+body {
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+body::before {
+  display: none;
+}
+
+#header {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  color: var(--muted);
+  border-radius: 10px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  color: var(--heading);
+  background: var(--accent);
+}
+
+section {
+  padding: 36px 0;
+}
+
+.section-title {
+  padding-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.profile-hero-copy,
+.resume .resume-item,
+.skills .progress,
+.portfolio .resume-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: none;
+}
+
+.profile-hero-copy {
+  padding: 32px;
+}
+
+.profile-hero-copy::before {
+  display: none;
+}
+
+.profile-hero-avatar {
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+.profile-summary,
+.section-title p,
+.resume .resume-item p,
+.resume .resume-item li {
+  color: var(--muted);
+}
+
+.hero-highlights span {
+  background: var(--accent);
+  border: 0;
+  box-shadow: none;
+  color: var(--secondary);
+}
+
+.resume .resume-item {
+  border-left: 3px solid var(--primary);
+  border-radius: 0 12px 12px 0;
+  box-shadow: none;
+}
+
+.resume .resume-item h5 {
+  display: inline-block;
+  background: var(--accent);
+}
+
+.skills .progress {
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+.portfolio .resume-item {
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    border-radius: 18px;
+  }
+}
